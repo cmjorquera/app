@@ -1,0 +1,82 @@
+<ion-content>
+  <div class="login-container">
+    <!-- Imagen de encabezado o avatar -->
+    <div class="image-container">
+      <img
+        src="assets/img/avatar_masculino.svg"
+        alt="Avatar"
+        class="login-image"
+      />
+    </div>
+
+    <h2>Crear Usuario</h2>
+
+    <!-- Formulario -->
+    <form (ngSubmit)="crearUsuario()">
+      <ion-item [class.is-invalid]="!nombreValido">
+        <ion-input
+          placeholder="Nombre"
+          [(ngModel)]="nombre"
+          name="nombre"
+      
+          type="text"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item [class.is-invalid]="!correoValido">
+        <ion-input
+          placeholder="Correo electrónico"
+          [(ngModel)]="correo"
+          name="correo"
+       
+          type="email"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item [class.is-invalid]="!contrasenaValida">
+        <ion-input
+          placeholder="Contraseña"
+          [(ngModel)]="contrasena"
+          name="contrasena"
+        
+          type="password"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item [class.is-invalid]="!confirmarContrasenaValida">
+        <ion-input
+          placeholder="Confirmar Contraseña"
+          [(ngModel)]="confirmarContrasena"
+          name="confirmarContrasena"
+         
+          type="password"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" class="button-primary" type="submit">
+        Crear Usuario
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        class="button-danger"
+      
+        (click)="volverLogin()"
+      >
+        Cancelar
+      </ion-button>
+    </form>
+
+    <!-- Toast dinámico -->
+    <ion-toast
+      [isOpen]="isToastOpen"
+      [message]="toastMessage"
+      [duration]="5000"
+      (didDismiss)="isToastOpen = false"
+    ></ion-toast>
+  </div>
+</ion-content>

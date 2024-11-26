@@ -35,3 +35,143 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+
+
+  /*  **************************** CSS GLOBAL ********************************/
+
+/* Fondo general */
+
+
+ion-content {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  text-align: center;
+  display: flex; /* Para centrar el contenido */
+  flex-direction: column; /* Coloca el contenido en columna */
+  justify-content: center; /* Centra verticalmente el contenido */
+  align-items: center; /* Centra horizontalmente el contenido */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+  
+  /* Contenedor principal */
+/* Contenedor principal */
+.login-container {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  text-align: center;
+  display: flex; /* Para centrar el contenido */
+  flex-direction: column; /* Coloca el contenido en columna */
+  justify-content: center; /* Centra verticalmente el contenido */
+  align-items: center; /* Centra horizontalmente el contenido */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+  
+  /* Imagen del avatar */
+  .image-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #00aaff;
+    object-fit: cover;
+    margin: auto;
+  }
+  
+/* Estilos para ion-item */
+ion-item {
+  --background: #000000; /* Fondo negro uniforme */
+  --border-radius: 10px; /* Esquinas redondeadas */
+  --padding-start: 15px;
+  --box-shadow: none; /* Elimina sombras */
+  --border-width: 0; /* Sin bordes adicionales */
+  color: #ffffff; /* Color del texto blanco */
+  margin-bottom: 0.5rem; /* Espaciado entre los inputs */
+}
+
+/* Estilos para ion-input */
+ion-input {
+  --padding-start: 15px;
+  --color: #ffffff; /* Color blanco al escribir */
+  font-size: 16px; /* Tamaño del texto ajustado */
+  --placeholder-color: #cccccc; /* Color del texto del placeholder */
+}
+  
+  /* Botones reutilizables */
+  ion-button {
+    --border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+  
+  /* Botón principal */
+  .button-primary {
+    --background: #4facfe; /* Azul claro */
+    --color: white;
+    --box-shadow: 0px 4px 10px rgba(79, 172, 254, 0.5); /* Sombra */
+  }
+  
+  /* Botón de eliminar */
+  .button-danger {
+    --background: #ff4d4d; /* Rojo */
+    --color: white;
+    --box-shadow: 0px 4px 10px rgba(255, 77, 77, 0.5); /* Sombra */
+  }
+  
+  /* Botón outline */
+  .button-outline {
+    --background: transparent;
+    --border-color: #4facfe;
+    --color: #4facfe;
+    --box-shadow: none;
+  }
+  
+  /* Enlace de "Olvidaste tu contraseña" */
+  p a {
+    color: #0078ff;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+
+
+
+  /*VALDIACION DE ERRORES*/
+ion-item.is-invalid {
+  --background: #000000; /* Fondo negro */
+  --border-radius: 10px; /* Esquinas redondeadas */
+  --border-color: #ff4d4d; /* Rojo para indicar error */
+  --border-width: 2px; /* Grosor del borde */
+  --padding-start: 15px;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Estilo del texto del placeholder */
+ion-input::placeholder {
+  color: #cccccc; /* Placeholder gris claro */
+}

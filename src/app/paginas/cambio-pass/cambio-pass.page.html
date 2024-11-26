@@ -1,0 +1,72 @@
+<ion-content>
+  <div class="login-container">
+    <!-- Imagen de encabezado o avatar -->
+    <div class="image-container">
+      <img
+        src="assets/img/avatar_masculino.svg"
+        alt="Avatar"
+        class="login-image"
+      />
+    </div>
+
+    <h2>Cambiar Contraseña</h2>
+
+    <!-- Formulario -->
+    <form (ngSubmit)="cambiarClave()">
+      <!-- Input para correo electrónico -->
+      <ion-item [class.is-invalid]="!correoValido">
+        <ion-input
+          placeholder="Correo electrónico"
+          [(ngModel)]="correo"
+          name="correo"
+          type="email"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <!-- Input para la nueva contraseña -->
+      <ion-item [class.is-invalid]="!nuevaContrasenaValida">
+        <ion-input
+          placeholder="Nueva Contraseña"
+          [(ngModel)]="nuevaContrasena"
+          name="nuevaContrasena"
+          type="password"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <!-- Input para confirmar la nueva contraseña -->
+      <ion-item [class.is-invalid]="!confirmarContrasenaValida">
+        <ion-input
+          placeholder="Confirmar Nueva Contraseña"
+          [(ngModel)]="confirmarContrasena"
+          name="confirmarContrasena"
+          type="password"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <!-- Botón para cambiar contraseña -->
+      <ion-button expand="block" class="button-primary" type="submit">
+        Cambiar Contraseña
+      </ion-button>
+
+      <!-- Botón de cancelar -->
+      <!-- <ion-button
+        expand="block"
+        class="button-danger"
+        (click)="volverLogin()"
+      >
+        Cancelar
+      </ion-button> -->
+    </form>
+
+    <!-- Toast dinámico -->
+    <ion-toast
+      [isOpen]="isToastOpen"
+      [message]="toastMessage"
+      [duration]="5000"
+      (didDismiss)="isToastOpen = false"
+    ></ion-toast>
+  </div>
+</ion-content>

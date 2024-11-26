@@ -1,0 +1,33 @@
+/* Estilo general del menú */
+ion-menu {
+    --width: 250px; /* Ancho del menú */
+  }
+  
+  /* Fondo y color del encabezado */
+  ion-header {
+    --background: #0078ff; /* Azul primario */
+    --color: white; /* Texto blanco */
+  }
+  
+  /* Personalización de los ítems */
+  ion-item {
+    --background: transparent; /* Fondo transparente */
+    --color: #fcfbfb; /* Texto oscuro */
+    --border-color: transparent;
+    margin: 0.5rem 0;
+  }
+  
+  ion-item:hover {
+    --background: #e0e0e0; /* Fondo gris al pasar el mouse */
+  }
+  
+  ion-icon {
+    font-size: 20px;
+    color: #0078ff; /* Azul primario */
+  }
+  
+  ion-footer {
+    --background: #f8f8f8; /* Fondo claro */
+    --color: #e64747; /* Texto oscuro */
+  }
+  

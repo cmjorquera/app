@@ -1,0 +1,67 @@
+<ion-content [fullscreen]="true" class="ion-padwwding">
+
+  <div class="login-container">
+    <!-- Imagen de Login -->
+    <div class="image-container">
+      <img src="assets/img/avatar_masculino.svg" alt="Avatar" class="login-image">
+    </div>
+
+    <!-- Cantidad de Usuarios -->
+    <ion-label class="cantidad-usuarios">
+      CANTIDAD USUARIOS: {{ cantidadUsuarios }}
+      <ion-button size="small" fill="clear" (click)="navegarOtraPagina()">
+       x
+      </ion-button>
+    </ion-label>
+    
+
+    <!-- Input para el correo -->
+    <ion-item [class.is-invalid]="correoInvalido">
+      <ion-input
+        id="correo"
+        placeholder="Correo electrónico"
+        [(ngModel)]="correo"
+        name="correo"
+     
+        type="email"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <!-- Input para la contraseña -->
+    <ion-item [class.is-invalid]="contrasenaInvalida">
+      <ion-input
+        id="contrasena"
+        placeholder="Contraseña"
+        [(ngModel)]="contrasena"
+        name="contrasena"
+      
+        type="password"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <!-- Botón de Iniciar Sesión -->
+    <ion-button expand="block" class="button-primary" (click)="iniciarSesion()">
+      Iniciar Sesión
+    </ion-button>
+
+    <!-- Botón de Crear Cuenta -->
+    <ion-button expand="block" class="button-outline" (click)="crearUsuario()">
+      Crear Cuenta
+    </ion-button>
+
+    <!-- Enlace de "Olvidaste tu contraseña" -->
+    <p><a href="#">000</a></p>
+    <p><a (click)="irACambioPass()">¿Olvidaste tu contraseña?</a></p>
+
+  </div>
+
+  <!-- Toast para mostrar mensajes -->
+  <ion-toast
+    [isOpen]="isToastOpen"
+    [message]="toastMessage"
+    duration="3000"
+  ></ion-toast>
+
+</ion-content>
